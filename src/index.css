@@ -13,3 +13,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+button {
+  margin-top: 6px;
+  background: #52bcc6;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+button:hover:focus {
+  background: #177f89;
+}
+
+.active {
+  color: rgba(55, 69, 226);
+}

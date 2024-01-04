@@ -1,10 +1,10 @@
-import { Formik } from 'formik';
-import { Form, Field, ErrorMessage, Button } from './ContactsForm.styled';
+import { Formik, Form, Field, ErrorMessage  } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { selectedContacts } from '../../redux/selectors';
-import { addContact } from '../../redux/operations';
+import { selectedContacts } from '../../redux/contacts/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import css from './ContactsForm.module.css';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -36,14 +36,14 @@ export const ContactsForm = () => {
         actions.resetForm();
       }}
     >
-      <Form>
-        <label>Name</label>
-        <Field type="text" name="name" />
-        <ErrorMessage name="name" component="span" />
-        <label>Number</label>
-        <Field type="tel" name="number" />
-        <ErrorMessage name="number" component="span" />
-        <Button type="submit">Add contact</Button>
+      <Form className={css.form}>
+        <label className={css.label}>Name</label>
+        <Field className={css.input} type="text" name="name" />
+        <ErrorMessage className={css.error} name="name" component="span" />
+        <label className={css.label}>Number</label>
+        <Field className={css.input} type="tel" name="number" />
+        <ErrorMessage className={css.error} name="number" component="span" />
+        <button type="submit">Add contact</button>
       </Form>
     </Formik>
   );

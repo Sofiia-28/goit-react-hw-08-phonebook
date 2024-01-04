@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 16px 144px 16px 0;
+  display: flex;
+  gap: 36px;
+  justify-content: flex-end;
+}
+
+.username {
+  font-weight: 700;
+}
